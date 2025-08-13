@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo LocalStorage y SessionStorage</title>
+</head>
+<body>
+    <h1>Ejemplo LocalStorage y SessionStorage</h1>
+
+    <h2>Guardando Nombre de Usuario (localStorage)</h2>
+    <input type="text" id="nombre" placeholder="Escribe tu nombre">
+    <button onclick="guardarNombre()">Guardar Nombre</button>
+    <p>Nombre almacenado: <span id="nombreAlmacenado"></span></p>
+
+    <h2>Preferencia de Tema (sessionStorage)</h2>
+    <button onclick="guardarTema('Oscuro')">Tema Oscuro</button>
+    <button onclick="guardarTema('Claro')">Tema Claro</button>
+    <p>Tema actual: <span id="temaAlmacenado"></span></p>
+
+    <script>
+        // Función para guardar el nombre de usuario
+        function guardarNombre() {
+            const nombre = document.getElementById('nombre').value;
+            localStorage.setItem("nombre", nombre);
+            mostrarNombre();
+        }
+
+        // Mostrar el nombre almacenado al cargar la página
+        function mostrarNombre() {
+            const nombre = localStorage.getItem("nombre");
+            if (nombre) {
+                document.getElementById('nombreAlmacenado').textContent = nombre;
+            }
+        }
+
+        // Función para guardar la preferencia de tema
+        function guardarTema(tema) {
+            sessionStorage.setItem("tema", tema);
+            mostrarTema();
+        }
+
+        // Mostrar el tema almacenado al cargar la página
+        function mostrarTema() {
+            const tema = sessionStorage.getItem("tema");
+            if (tema) {
+                document.getElementById('temaAlmacenado').textContent = tema;
+            }
+        }
+
+        // Mostrar los datos al cargar la página
+        window.onload = function() {
+            mostrarNombre();
+            mostrarTema();
+        }
+    </script>
+</body>
+</html>
+
+<!--Qué hace este código:
+Guarda el nombre de usuario usando localStorage y lo muestra al recargar la página.
+
+Almacena la preferencia de tema usando sessionStorage y muestra el tema actual mientras dure la sesión.
+
+Los botones permiten cambiar entre temas claro y oscuro, guardando la selección en el sessionStorage.
+
+--!>

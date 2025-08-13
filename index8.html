@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+</title>formulario de contacto</title>
+<style>
+
+body{
+	font-family: Arial, sans-serif; 
+	background-color: ##f2f2f2
+	padding: 40px;
+}
+
+form{
+	background-color: white;
+	padding: 20px; 
+	max-width: 400px; 
+	margin: auto; 
+	border-radius: 10px; 
+	box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+label{
+	display: block;
+	margin-top: 10px; 
+	font-weight: bold;
+}
+
+imput, textarea, select{
+	width: 100%;
+	padding: 10px; 
+	margin-top: 5px; 
+	border: 1px solid #ccc;
+	border-radius: 5px; 
+}
+
+button{
+	margin-top: 15px; 
+	background-color: #3498db; 
+	color: white; 
+	border: none; 
+	padding: 10px; 
+	border-radius:5px;
+	cursor: pointer;
+}
+button:hover{
+background-color: #2980b9; 
+}
+
+</style>
+</head>
+
+<body>
+<form id="formulario">
+
+<h2>Formulario de contacto</h2>
+
+<label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+
+    <label for="correo">Correo electrónico:</label>
+    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+
+<label for="pais">País: </label>
+<select id="pais" name="pais">
+	
+	<option value ="">Seleccion el pais </option>
+	<option value ="ec">Ecuador </option>
+	<option value ="co">Colombia </option>
+	<option value ="pe">peru </option>
+	<option value ="ve">venezuela </option>
+</select>
+
+<label for="Comentario">Comentario: </label>
+<textarea id=comentario" name="Comentario" rows="4" placeholder="Escribe tu mensaje..."></textarea>
+
+<button type="submit"> ENVIAR </button>
+
+</form>
+
+
+
+  <script>
+    // Validación básica en JavaScript
+    document.getElementById("formulario").addEventListener("submit", function(event) {
+      const nombre = document.getElementById("nombre").value.trim();
+      const correo = document.getElementById("correo").value.trim();
+      const pais = document.getElementById("pais").value;
+
+      if (!nombre || !correo || !pais) {
+        alert("Por favor, completa todos los campos obligatorios.");
+        event.preventDefault(); // Detiene el envío del formulario
+      } else {
+        alert("Formulario enviado correctamente");
+      }
+    });
+  </script>
+
+</body>
+</html>

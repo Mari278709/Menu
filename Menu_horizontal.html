@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Menu horizontal</title>
+	<meta charset="UTF-8">
+  </head>
+  <!-- usar estilos externos -->
+	<style>
+	/*Estilos general*/
+	    body{
+		    font-family:Arial,sans-serif;
+			margin:0;
+		}	
+	
+	/*Estilos menu horizontal*/	
+	    nav{
+		    width:100%;
+			height:60px;
+			background-color:#333;
+			position: fixed;
+			top:0;
+			left:0;
+			display: flex;
+			justify-content:center;
+			align-1tems:center;
+			z-index:1000; /*prueba*/
+		}
+		
+		nav ul{
+		    list-style:none;
+			padding:0;
+			margin:0;
+			display: flex;
+		}
+
+		nav ul li{
+		    padding:15px 20px;
+		}
+
+		nav ul li a{
+            color: white;
+			text-decoration:none;
+			font-size:10px;
+			display:block;
+		}	
+		
+		nav ul li a:hover{
+            background-color:
+			border-radius:5px;
+		}	
+		
+		/*Que el menu no obstruya el contenido de la pagina
+		main{
+		    margin-top:80px;
+			padding:20px;
+			text-align:center;
+        }
+		h1{
+		    margin-bottom:20px;
+		}
+        
+		/*Estilos galeria*/
+		section{
+		       display:flex;
+			   flex-wrap:wrap;
+			   gap:20px;/*prueba*/
+			   justify-content:center;
+		}	   
+		
+		figure{
+		      text-align:center;
+			  width:220px;
+		}
+
+        figure img{
+              width:100%;
+			  height:auto
+			  max-width:150px
+			  border-radius:10px
+			  transition: transform 0.3s ease;
+		}
+		
+		figure img:hover{
+		      transform: scale(1.1);
+			  
+		}
+		figoption{
+		      font-size:14px;
+			  margin-top:5px;
+			  color:#555;
+	    }
+		
+		/*pie de pagina */
+		footer{
+		      text-align:center;
+			  padding:15px;
+			  color:white;
+			  margin-top:20px;
+			  
+        }
+  </style>	  
+	
+<body>
+      <nav>
+	     <ul>
+		     <li> <a href="Ejemplo1_selectores.html"> Ejercicio 1 </a></li>
+		     <li> <a href="Ejemplo2_bordes.html"> Ejercicio 2 </a></li>
+		     <li> <a href="Ejemplo3_margen_y_relleno.html"> Ejercicio 3 </a></li>
+			 <li> <a href="Ejemplo1_selectores.html"> Ejercicio 4 </a></li> 
+		 </ul>
+      </nav>
+	  
+	  <main>
+	       <h1>Galeria de imagenes</h1>
+		   <section>
+		        <figure>
+				      <img src= "https://es.mypet.com/wp-content/uploads/sites/23/2021/03/razas-de-perros-pastor-aleman-570x455-1.jpg" alt="Imagen1">
+					  <figcaption> Pastor Aleman </figcaption>
+				</figure>
+				
+				<figure>
+				      <img src= "https://cdn0.expertoanimal.com/es/razas/0/0/8/shepsky_800_0_orig.jpg" alt="Imagen2">
+					  <figcaption> Shepsky </figcaption>
+				</figure>
+				
+				<figure>
+				      <img src= "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRESlCd58aNXiC78E06xrS9KSNNLn6dZg5VS8QYhUzufKVDQOnpiWYd9QooFOwGPA43zjV5E3qDqagpl5_74MSplw" alt="Imagen3">
+					  <figcaption> Bulldog </figcaption>
+				</figure>
+				
+				<figure>
+				      <img src= "https://www.vidavetcare.com/wp-content/uploads/sites/234/2022/04/golden-retriever-dog-breed-info.jpeg" alt="Imagen4">
+					  <figcaption> Golden Retriever </figcaption>
+				</figure>
+				
+				
+				<figure>
+				      <img src= "https://www.hogarmania.com/archivos/202301/beagle-portada-1280x720x80xX.jpg" alt="Imagen5">
+					  <figcaption> Beagle </figcaption>
+				</figure>
+				
+				
+				<figure>
+				      <img src= "https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcR_fgnZUvDsXnEGtsfZIaOTpFmV9Vo6nlTNLwc6oIxaOCQkr4RUbjICTwD25epoG-ZsoJX4L8Cgt1-xRTQDD86Igw" alt="Imagen6">
+					  <figcaption> Poodle </figcaption>
+				</figure>
+				
+				
+				<figure>
+				      <img src= "https://i0.wp.com/mascooriente.co/wp-content/uploads/2022/06/pastor-ganadero-autraliano.jpg?fit=520%2C355&ssl=1" alt="Imagen7">
+					  <figcaption> Pastor Ganadero Australiano </figcaption>
+				</figure>
+				
+				
+				<figure>
+				      <img src= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRicfPnI5QHKx1tUXT7Y6CoVQgj-uCFJFTDGdNhiMU9N6cXT8LWyvb5b9DEcUWiBQA8tnBq7L479I3R2v2ZZZ2kKQ" alt="Imagen8">
+					  <figcaption> Malamute de Alaska </figcaption>
+				</figure>
+		   </section>
+		   <footer style="background-color:black;color:white;text-align:center;padding:10px">
+		       <p> Galeria web 2025 - Todos los derechos reservados </p>
+		   </footer>
